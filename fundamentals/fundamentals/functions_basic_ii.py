@@ -26,9 +26,11 @@ print(first_plus_length([1,2,3,4,5]))
 
 # 4. Values Greater than Second - Write a function that accepts a list and creates a new list containing only the values from the original list that are greater than its 2nd value. Print how many values this is and then return the new list. If the list has less than 2 elements, have the function return False
 
-new_list = []
 
 def create_list(og_list):
+    if len(og_list) < 2:
+        return False
+    new_list = []
     count = 0
     for i in range(0, len(og_list)):
         if og_list[i] > og_list[1]:
@@ -44,7 +46,7 @@ print(create_list([5,2,3,2,1,4]))
 list_3 = []
 
 def size_value(size, value):
-    for x in range(0, size+1):
+    for x in range(0, size):
         list_3.append(value)
     return list_3
 
