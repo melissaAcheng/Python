@@ -14,16 +14,11 @@
         <div class="row">
             <div class="column">
                 {% for j in range(y) %}
-                <div class="square" style="background-color:{{color1}}"></div>
-                <div class="square" style="background-color:{{color2}}"></div>
-                {% endfor %}
-            </div>
-        </div>
-        <div class="row">
-            <div class="column">
-                {% for j in range(y) %}
-                <div class="square" style="background-color:{{color2}}"></div>
-                <div class="square" style="background-color:{{color1}}"></div>
+                    {% if (j+i) % 2 == 0 %}
+                        <div class="square" style="background-color:{{color1}}"></div>
+                    {% else %}
+                        <div class="square" style="background-color:{{color2}}"></div>
+                    {% endif %}
                 {% endfor %}
             </div>
         </div>
