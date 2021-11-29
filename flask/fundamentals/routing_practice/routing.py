@@ -17,8 +17,8 @@ def say_hello(name):
 def repeat_word(num,word):
     return (word * num)
 
-@app.route('/%')
-def error_message():
+@app.route('/<random>')
+def error_message(random):
     return 'Sorry! No response. Try again.'
 
 if __name__=="__main__":

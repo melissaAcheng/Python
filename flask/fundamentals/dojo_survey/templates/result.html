@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- import bootstrap css library -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+        .no-border td {
+            border: 0;
+        }
+    </style>
+
+    <title>Dojo Survey Index</title>
+</head>
+<body>
+    <div class="container p-3 mt-5 border border-info">
+        <h3>Submitted Info</h3>
+
+        <table class="table no-border w-auto">
+            <tr>
+                <td>Name:</td>
+                <td>{{ session['name'] }}</td>
+            </tr>
+            <tr>
+                <td>Age:</td>
+                <td>{{ session['age'] }}</td>
+            </tr>
+            <tr>
+                <td>Dojo Location:</td>
+                <td>{{ session['dojo-location'] }}</td>
+            </tr>
+            <tr>
+                <td>Program:</td>
+                <td>{{ session['program'] }}</td>
+            </tr>
+            <tr>
+                <td>Favorite Language:</td>
+                <td>{{ session['fav-language'] }}</td>
+            </tr>
+            <tr>
+                <td>Comments:</td>
+                <td>{{ session['comments'] }}</td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="/" class="btn btn-info">Go Back</a>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+</body>
+</html>
